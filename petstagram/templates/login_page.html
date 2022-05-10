@@ -24,38 +24,35 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'index-page' %}">Home</a>
+                <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                <a class="nav-link" href="#">Dashboard</a>
             </li>
         </ul>
     </div>
 </nav>
 <!-- End Navigation Bar -->
 
-<div class="container">
-    <div class="jumbotron">
-        <img style="width: 100%"
-             src="https://activepets.co.za/web/ap-content/uploads/2019/08/Active-pets-dogs-and-cats.png" alt="">
-        <div class="position-sticky">
-            <h1 class="display-4">Welcome to Petstagram</h1>
-            <p class="lead">Share your pets photos.</p>
-            <hr class="my-4">
-            <div class="flex-row">
+<div class="container mb-5">
+    <h1 class="text-center">Login to Your Profile</h1>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
 
-                <!-- Login Button -->
-                <a href="#" class="btn btn-lg btn-secondary">Login</a>
+            <!-- Login Form -->
+            <form method="POST">
+                <button class="btn btn-primary mt-2" type="submit">Log in</button>
+            </form>
+            <!-- End Login Form -->
 
-                <!-- Register Button -->
-                <a href="#" class="btn btn-lg btn-secondary">Register</a>
-            </div>
         </div>
+        <div class="col-lg-3"></div>
     </div>
 </div>
 
 <!-- Page Footer -->
-<footer class="fixed-bottom card-footer">
+<footer class="fixed-bottom card-footer ">
     <div>@2022 Python Web Basics Workshop at SoftUni</div>
 </footer>
 <!-- End Page Footer -->

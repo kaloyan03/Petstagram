@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom:2%">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -24,10 +23,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'index-page' %}">Home</a>
+                <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                <a class="nav-link" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Add Pet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Add Photo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
             </li>
         </ul>
     </div>
@@ -35,32 +43,26 @@
 <!-- End Navigation Bar -->
 
 <div class="container">
-    <div class="jumbotron">
-        <img style="width: 100%"
-             src="https://activepets.co.za/web/ap-content/uploads/2019/08/Active-pets-dogs-and-cats.png" alt="">
-        <div class="position-sticky">
-            <h1 class="display-4">Welcome to Petstagram</h1>
-            <p class="lead">Share your pets photos.</p>
-            <hr class="my-4">
-            <div class="flex-row">
+    <h1 class="text-center">Edit Your Pet Info</h1>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form method="post" action="profile_details.html">
 
-                <!-- Login Button -->
-                <a href="#" class="btn btn-lg btn-secondary">Login</a>
+                <!-- Form for Editing a Pet Info -->
 
-                <!-- Register Button -->
-                <a href="#" class="btn btn-lg btn-secondary">Register</a>
-            </div>
+                <button class="btn btn-primary mt-2" type="submit">Edit</button>
+            </form>
         </div>
+        <div class="col-lg-3"></div>
     </div>
 </div>
 
 <!-- Page Footer -->
-<footer class="fixed-bottom card-footer">
+<footer class="fixed-bottom card-footer ">
     <div>@2022 Python Web Basics Workshop at SoftUni</div>
 </footer>
 <!-- End Page Footer -->
-
-</body>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -71,5 +73,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
+</body>
 
 </html>
