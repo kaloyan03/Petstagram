@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "petstagram.auth_app",
+    'petstagram.home',
+    'petstagram.profiles',
 
 ]
 
