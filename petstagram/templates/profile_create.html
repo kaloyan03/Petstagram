@@ -36,11 +36,11 @@
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-            <form method="POST" action="home.html">
-
-                <!-- Form for Creating a Profile -->
-
-                <button class="btn btn-primary mt-2" type="submit">Create</button>
+            <form method="POST" action="{% url 'sign up view' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ sign_up_form }}
+                    {{ profile_form }}
+                <input class="btn btn-primary mt-2" type="submit" value="Create"/>
             </form>
         </div>
         <div class="col-lg-3"></div>
