@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "petstagram.auth_app",
     'petstagram.home',
     'petstagram.profiles',
+    'petstagram.pets',
 
 ]
 

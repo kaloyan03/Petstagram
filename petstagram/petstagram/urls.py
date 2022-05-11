@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('petstagram.home.urls')),
     path('auth/', include('petstagram.auth_app.urls')),
     path('profiles/', include('petstagram.profiles.urls')),
+    path('pets/', include('petstagram.pets.urls')),
 ]
 
 if settings.DEBUG:
