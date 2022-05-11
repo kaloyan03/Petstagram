@@ -1,9 +1,11 @@
+from django.contrib.auth import views as auth_views, authenticate, login
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from django.urls import reverse_lazy
 from django.views import generic as views
 
-from petstagram.auth_app.forms import SignUpForm
+from petstagram.auth_app.forms import SignUpForm, SignInForm
 from petstagram.profiles.forms import CreateProfileForm
 
 
@@ -34,5 +36,10 @@ class SignUpView(views.TemplateView):
 
         return render(request, 'profile_create.html', context={'profile_form': profile_form, 'sign_up_form': sign_up_form})
 
+
+class SignInView(auth_views.LoginView):
+    template_name = 'login_page.html'
+    form_class = SignInForm
+    next_page = reverse_lazy('home page')
 
 
