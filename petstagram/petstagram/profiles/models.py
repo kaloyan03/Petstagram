@@ -35,14 +35,6 @@ class Profile(models.Model):
         )
     )
 
-    profile_picture = models.ImageField(
-        upload_to='profile_pictures',
-    )
-
-    birth_day = models.DateTimeField()
-
-    description = models.TextField()
-
     gender = models.CharField(
         choices=GENDER_CHOICES,
         max_length=GENDER_MAX_LENGTH,
@@ -51,6 +43,11 @@ class Profile(models.Model):
         )
 
     )
+
+    profile_picture = models.ImageField(
+        upload_to='profile_pictures',
+    )
+
     user = models.OneToOneField(
         UserModel,
         on_delete=models.CASCADE,
