@@ -1,9 +1,9 @@
 from django.apps import apps
-from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth.models import UserManager
 
 
-class PetstagramUserManager(BaseUserManager):
+class PetstagramUserManager(UserManager):
     def _create_user(self, email, password, **extra_fields):
         """
         Create and save a user with the given username, email, and password.

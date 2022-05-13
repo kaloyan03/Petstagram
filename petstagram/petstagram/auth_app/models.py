@@ -11,6 +11,10 @@ class PetstagramUser(AbstractBaseUser, PermissionsMixin):
         unique=True,
     )
 
+    is_staff = models.BooleanField(
+        default=False,
+    )
+
     objects = PetstagramUserManager()
 
     USERNAME_FIELD = "email"
