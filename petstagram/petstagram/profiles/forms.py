@@ -8,3 +8,8 @@ class CreateProfileForm(BootstrapFormMixin, forms.ModelForm):
     class Meta:
         model = Profile
         exclude = ['user']
+
+class EditProfileForm(BootstrapFormMixin, forms.ModelForm):
+    class Meta:
+        model = Profile
+        exclude = ['user']
