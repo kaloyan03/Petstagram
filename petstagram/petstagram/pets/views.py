@@ -31,6 +31,8 @@ class ListPetsView(views.ListView):
     def get_queryset(self):
         pets = Pet.objects.all()
         for pet in pets:
+            current_pet_photo = PetPhoto.objects.get(tagged_pets=pet.id)
+            pet.photo = current_pet_photo.photo
             pet.age = datetime.now().year - pet.date_of_birth.year
 
         return pets
