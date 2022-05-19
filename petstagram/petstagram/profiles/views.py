@@ -1,7 +1,9 @@
-
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic as views
+
+from petstagram.auth_app.models import PetstagramUser
 from petstagram.profiles.forms import EditProfileForm
 
 # Create your views here.
@@ -27,6 +29,20 @@ class EditProfileView(views.UpdateView):
 
 
 class DeleteProfileView(views.DeleteView):
-    pass
+    template_name = 'profile_delete.html'
+    queryset = Profile.objects.all()
+    success_url = reverse_lazy('sign in view')
+
+
+    def form_valid(self, form):
+        success_url = self.get_success_url()
+
+        user = self.request.user
+        profile = self.object
+
+        user.delete()
+        profile.delete()
+        return HttpResponseRedirect(success_url)
+
 
 

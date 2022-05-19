@@ -18,9 +18,13 @@
             <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'add pet photo view' %}active{% endif %}" href="{% url 'add pet photo view' %}">Add Photo</a>
             </li>
-            <li class="nav-item">
+
+        {% if request.user.profile %}
+        <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'show profile view' %}active{% endif %}" href="{% url 'show profile view' request.user.profile.id %}">Profile</a>
             </li>
+        {% endif %}
+
         </ul>
     </div>
 </nav>
