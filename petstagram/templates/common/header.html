@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'home page' %}">Home</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'home page' %}active{% endif %}" href="{% url 'home page' %}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'list pets view' %}">Dashboard</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'list pets view' %}active{% endif %}" href="{% url 'list pets view' %}">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'add pet view' %}">Add Pet</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'add pet view' %}active{% endif %}" href="{% url 'add pet view' %}">Add Pet</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'add pet photo view' %}">Add Photo</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'add pet photo view' %}active{% endif %}" href="{% url 'add pet photo view' %}">Add Photo</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'show profile view' request.user.profile.id %}">Profile</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'show profile view' %}active{% endif %}" href="{% url 'show profile view' request.user.profile.id %}">Profile</a>
             </li>
         </ul>
     </div>
